@@ -1,3 +1,5 @@
+# import fortunecookiecravaggio.fortune as fortune
+
 def main():
     print("""
 🌟 Welcome to Python Fortune Cookie! 🍪✨
@@ -13,4 +15,5 @@ Get a randomly generated fortune, programming wisdom, or a bit of absurd advice.
 Unwrap your fortune now! 🥠
     """)
 
-main()
+if __name__ == "__main__":
+    main()
