@@ -1,4 +1,5 @@
 # import fortunecookiecravaggio.fortune as fortune
+from .fortune import fortune_of_the_day
 
 def main():
     print("""
@@ -14,6 +15,9 @@ Get a randomly generated fortune, programming wisdom, or a bit of absurd advice.
 
 Unwrap your fortune now! 🥠
     """)
+    fortune = fortune_of_the_day()
+    print("Fortune Cookie says...")
+    print(f"{fortune}")
 
 if __name__ == "__main__":
     main()
