@@ -80,8 +80,10 @@ def custom_fortune(message: str) -> str:
         raise ValueError("Fortune message cannot be empty.")
  
     message = message.strip()
+    # Determine the path to fortunes.txt in the same directory as this file
     file_path = os.path.join(os.path.dirname(__file__), 'fortunes.txt')
     try:
+        # Open fortunes.txt in append mode and add the message with a newline
         with open(file_path, 'a', encoding='utf-8') as f:
             f.write(message + "\n")
     except Exception as e:
