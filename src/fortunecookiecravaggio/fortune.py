@@ -27,23 +27,16 @@ def get_fortune(user_input, file_path="fortunes.txt"):
     return fortunes[index]
 
 
-def fortune_of_the_day():
+def fortune_of_the_day(file_path="fortunes.txt"):
     # Seed with today's ordinal date so the fortune changes daily
     random.seed(date.today().toordinal())
 
-    fortunes = [
-        "Today is your lucky day!",
-        "An unexpected event will soon bring you fortune.",
-        "You will find the solution you’ve been looking for.",
-        "A dream you have will come true.",
-        "Your hard work will pay off very soon.",
-        "A pleasant surprise is waiting for you.",
-        "Success will come to you in the near future.",
-        "Happiness begins with facing life with a smile and a wink.",
-        "Your abilities will shortly be recognized by others.",
-        "A new venture will bring you great success."
-    ]
-    return random.choice(fortunes)
+    try:
+        with open(file_path, "r", encoding="utf-8") as file:
+            fortunes = [line.strip() for line in file if line.strip()]
+        return random.choice(fortunes)
+    except FileNotFoundError:
+        return ["Error: Fortune file not found. Please create a 'fortunes.txt' file."]
 
 def custom_fortune(message: str, author: str) -> dict:
     """
