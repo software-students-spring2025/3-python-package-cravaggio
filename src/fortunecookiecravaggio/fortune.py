@@ -29,8 +29,6 @@ def get_fortune(user_input, file_path="fortunes.txt"):
 
     return fortunes[index]
 
-def get_fortune():
-    print("testing fortune")
 
 def fortune_of_the_day():
     # Seed with today's ordinal date so the fortune changes daily
