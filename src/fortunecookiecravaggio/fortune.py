@@ -124,5 +124,5 @@ def fortune_with_ascii_art():
     ]
     
     ascii_art = random.choice(art_list)
-    fortune = get_fortune()
+    fortune = get_fortune("random")
     return f"{ascii_art}\n🍀 Fortune: {fortune}"
