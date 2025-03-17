@@ -1,33 +1,9 @@
-import hashlib
 import random
 from datetime import date
 import os
 import json
 
 FORTUNE_FILE = os.path.join(os.path.dirname(__file__), 'custom_fortunes.json')
-
-# fortunes imported from fortune cookie database: http://www.fortunecookiemessage.com/archive.php
-def load_fortunes(file_path="fortunes.txt"):
-    """Reads fortunes from a text file and returns a list."""
-    try:
-        with open(file_path, "r", encoding="utf-8") as file:
-            fortunes = [line.strip() for line in file if line.strip()]
-        return fortunes
-    except FileNotFoundError:
-        return ["Error: Fortune file not found. Please create a 'fortunes.txt' file."]
-
-def get_fortune(user_input, file_path="fortunes.txt"):
-    """Returns a fortune based on the user input by hashing the input to pick a fortune."""
-    fortunes = load_fortunes(file_path)
-
-    if not fortunes or "Error" in fortunes[0]:
-        return fortunes[0]  # Return error message if file is missing
-
-    # Create a hash of the input to determine the fortune index
-    hash_value = int(hashlib.sha256(user_input.encode()).hexdigest(), 16)
-    index = hash_value % len(fortunes)
-
-    return fortunes[index]
 
 def get_fortune():
     print("testing fortune")
@@ -97,64 +73,3 @@ def custom_fortune(message: str, author: str) -> dict:
         raise Exception(f"Error writing fortunes file: {e}")
 
     return new_fortune
-
-def fortune_with_ascii_art():
-    """Returns a fortune message with random ASCII art."""
-    art_list = [
-        """
-        (\_/)
-        (o.o)
-        (")(")
-        """,
-        """
-        _______
-       /       \\ 
-      |  🥠  |
-       \\_______/
-        """,
-        """
-        ʕ•ᴥ•ʔ
-        """,
-        """
-          __    __
-        o-''))_____\\ 
-        "--__/ * * * )
-        c_c__/-c____/
-        """,
-        """
-         /^ ^\ 
-        / 0 0 \ 
-        V\ Y /V
-        / - \ 
-        |    \ 
-        || (__V
-        """,
-        """
-         /\_/\ 
-        ( o.o )
-         > ^ <
-        """,
-        """
-                      /|      __
-*             +      / |   ,-~ /             +
-     .              Y :|  //  /                .         *
-         .          | jj /( .^     *
-               *    >-"~"-v"              .        *        .
-*                  /       Y
-   .     .        jo  o    |     .            +
-                 ( ~T~     j                     +     .
-      +           >._-' _./         +
-               /| ;-"~ _  l
-  .           / l/ ,-"~    \     +
-              \//\/      .- \ 
-       +       Y        /    Y
-               l       I     !
-               ]\      _\    /"\ 
-              (" ~----( ~   Y.  )
-          ~~~~~~~~~~~~~~~~~~~~~~~~~~
-        """
-    ]
-    
-    ascii_art = random.choice(art_list)
-    fortune = get_fortune()
-    return f"{ascii_art}\n🍀 Fortune: {fortune}"
