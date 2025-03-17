@@ -1,4 +1,5 @@
 from fortune import get_fortune, load_fortunes
+from .fortune import fortune_of_the_day
 
 def main():
     print("""
@@ -16,6 +17,10 @@ Unwrap your fortune now! 🥠
     """)
     user_input = input("Enter a word, phrase, or thought to receive your fortune: ")
     print(get_fortune(user_input))
+    
+    fortune = fortune_of_the_day()
+    print("Fortune Cookie says...")
+    print(f"{fortune}")
 
 if __name__ == "__main__":
     main()
