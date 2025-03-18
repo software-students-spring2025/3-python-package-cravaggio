@@ -23,3 +23,24 @@ def test_fortune_of_the_day_consistent_for_same_date():
         fortune2 = fortune_of_the_day()
     
     assert fortune1 == fortune2, "Expected the same fortune for the same date"
+
+
+def test_fortune_of_the_day_different_for_different_dates():
+    test_date_1 = datetime.date(2025, 3, 15)
+    test_date_2 = datetime.date(2025, 3, 16)
+    
+    with patch("fortunecookiecravaggio.fortune.date") as mock_date:
+        # Mock first date
+        mock_date.today.return_value = test_date_1
+        mock_date.today.return_value.toordinal.return_value = test_date_1.toordinal()
+        fortune_day_1 = fortune_of_the_day()
+    
+    with patch("fortunecookiecravaggio.fortune.date") as mock_date:
+        # Mock second date
+        mock_date.today.return_value = test_date_2
+        mock_date.today.return_value.toordinal.return_value = test_date_2.toordinal()
+        fortune_day_2 = fortune_of_the_day()
+
+    assert fortune_day_1 != fortune_day_2, (
+        "Expected different fortunes for different dates, but got the same"
+    )
