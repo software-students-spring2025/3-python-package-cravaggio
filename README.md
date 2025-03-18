@@ -1,5 +1,54 @@
-# Python Package Exercise
-
-An exercise to create a Python package, build it, test it, distribute it, and use it. See [instructions](./instructions.md) for details.
+# Fortune Cookie Cravaggio
 
 [![log github events](https://github.com/software-students-spring2025/3-python-package-cravaggio/actions/workflows/event-logger.yml/badge.svg?branch=main)](https://github.com/software-students-spring2025/3-python-package-cravaggio/actions/workflows/event-logger.yml)
+
+Team members: [Nina Li](https://github.com/), [Sirui Wang](https://github.com/), [Bohan Yin](https://github.com/), [Nick Zhu](https://github.com/)
+
+## TABLE OF CONTENTS
+1. [Description](#description)
+2. [PyPI Page](#pypi-page)
+3. [Installation](#installation)
+4. [Virtual Environment & Dependencies](#virtual-environment--dependencies)
+5. [Usage Examples](#usage-examples)
+6. [Contributing](#contributing)
+
+## Description
+A package that generates “fortune cookie” messages, programming wisdom, or absurd advice when called.
+
+## PyPI Page
+You can find the package here:
+
+## Installation
+
+You can import the Fortune Cookie Generator package into their own projects using pip. Below is how to install the package:
+
+**1. Install the package from PyPI**
+```
+pip install fortunecookiecravaggio
+```
+
+**2. Import the functions in your Python code**
+```
+from fortunecookiecravaggio import get_fortune, load_fortunes, fortune_of_the_day, custom_fortune, fortune_with_ascii_art
+```
+## Virtual Environment & Dependencies
+how to configure and run all parts of your project for any developer on any platform 
+how to set up any environment variables and import any starter data into the database, as necessary, for the system to operate correctly when run.
+
+## Usage Examples
+see example.py
+
+**1. get_fortune**
+```
+user_input = input("Enter a word, phrase, or thought to receive your fortune: ")
+print(get_fortune(user_input))
+```
+**2. fortune_of_the_day**
+
+**3. custom_fortune**
+
+**4. fortune_with_ascii_art**
+
+## Contributing
+We welcome contributions! Here’s how you can help:
+
