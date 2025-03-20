@@ -1,0 +1,23 @@
+name: CI / CD
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.11"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Python, pipenv and Pipfile packages
+        uses: kojoru/prepare-pipenv@v1
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Turn on 'editable' mode
+        run: |
+          pipenv install -e .
+      - name: Test with pytest
+        run: |
+          pipenv install pytest
+          pipenv --venv
+          pipenv run python -m pytest

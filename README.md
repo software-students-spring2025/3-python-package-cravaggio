@@ -2,25 +2,25 @@
 
 [![log github events](https://github.com/software-students-spring2025/3-python-package-cravaggio/actions/workflows/event-logger.yml/badge.svg?branch=main)](https://github.com/software-students-spring2025/3-python-package-cravaggio/actions/workflows/event-logger.yml)
 
-Team members: [Nina Li](https://github.com/), [Sirui Wang](https://github.com/), [Bohan Yin](https://github.com/), [Nick Zhu](https://github.com/)
+[![log github events](https://github.com/software-students-spring2025/3-python-package-cravaggio/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/software-students-spring2025/3-python-package-cravaggio/actions/workflows/build.yml)
+
+Team members: [Nina Li](https://github.com/nina-jsl), [Sirui Wang](https://github.com/siruiii), [Bohan Yin](https://github.com/Hans-Yin), [Nick Zhu](https://github.com/NickZhuxy)
 
 ## TABLE OF CONTENTS
 1. [Description](#description)
-2. [PyPI Page](#pypi-page)
-3. [Installation](#installation)
-4. [Virtual Environment & Dependencies](#virtual-environment--dependencies)
-5. [Usage Examples](#usage-examples)
-6. [Contributing](#contributing)
+2. [Installation](#installation)
+3. [Virtual Environment & Dependencies](#virtual-environment--dependencies)
+4. [Usage Examples](#usage-examples)
+5. [Contributing](#contributing)
 
 ## Description
 A package that generates “fortune cookie” messages, programming wisdom, or absurd advice when called.
 
-## PyPI Page
 You can find the package here:
 
 ## Installation
 
-You can import the Fortune Cookie Generator package into their own projects using pip. Below is how to install the package:
+You can import the Fortune Cookie Generator package into your own projects using pip. Below is how to install the package:
 
 **1. Install the package from PyPI**
 ```
