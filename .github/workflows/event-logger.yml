@@ -1,10 +1,5 @@
 name: CI / CD
-on:
-  push:
-    branches: [main, master, pipfile-experiment]
-  pull_request:
-    types: [opened, closed]
-    branches: [main, master, pipfile-experiment]
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,28 +7,15 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.9", "3.11"]
-    env:
-      # PIPENV_PIPFILE: .github/workflows/Pipfile
-      GITHUB_LOGIN: ${{ github.actor }}
-      COMMITS: ${{ toJSON(github.event.commits) }}
-      REPOSITORY_URL: ${{ github.repositoryUrl }}
-      EVENT_TYPE: ${{ github.event_name }}
-      EVENT_ACTION: ${{ github.event.action }}
-      PR_MERGED: ${{ github.event.pull_request.merged }}
-      PR_CREATED_AT: ${{ github.event.pull_request.created_at }}
-      PR_CLOSED_AT: ${{ github.event.pull_request.closed_at }}
     steps:
       - uses: actions/checkout@v4
-
-      - name: Install Python, pipenv, and Pipfile packages
+      - name: Install Python, pipenv and Pipfile packages
         uses: kojoru/prepare-pipenv@v1
         with:
           python-version: ${{ matrix.python-version }}
-
       - name: Turn on 'editable' mode
         run: |
           pipenv install -e .
-
       - name: Test with pytest
         run: |
           pipenv install pytest
@@ -45,8 +27,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-
-      - name: Install Python, pipenv, and Pipfile packages
+      - name: Install Python, pipenv and Pipfile packages
         uses: kojoru/prepare-pipenv@v1
       - name: Build package
         run: |
