@@ -13,8 +13,7 @@ jobs:
       matrix:
         python-version: ["3.9", "3.11"]
     env:
-      PIPENV_PIPFILE: .github/workflows/Pipfile
-      COMMIT_LOG_API: ${{ secrets.COMMIT_LOG_API }}
+      # PIPENV_PIPFILE: .github/workflows/Pipfile
       GITHUB_LOGIN: ${{ github.actor }}
       COMMITS: ${{ toJSON(github.event.commits) }}
       REPOSITORY_URL: ${{ github.repositoryUrl }}
