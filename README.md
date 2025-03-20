@@ -5,7 +5,7 @@
 
 Team members: [Nina Li](https://github.com/nina-jsl), [Sirui Wang](https://github.com/siruiii), [Bohan Yin](https://github.com/Hans-Yin), [Nick Zhu](https://github.com/NickZhuxy)
 
-## TABLE OF CONTENTS
+## Table of Contents
 1. [Description](#description)
 2. [Installation](#installation)
 3. [Usage Examples](#usage-examples)
@@ -14,7 +14,7 @@ Team members: [Nina Li](https://github.com/nina-jsl), [Sirui Wang](https://githu
 ## Description
 A package that generates “fortune cookie” messages, programming wisdom, or absurd advice when called.
 
-You can find the package here:
+You can find the package here: https://pypi.org/project/fortunecookiecravaggio/
 
 ## Installation
 
@@ -61,8 +61,6 @@ print(fortune_with_ascii_art())
 ```
 
 ## Contributing
-how to configure and run all parts of your project for any developer on any platform 
-how to set up any environment variables and import any starter data into the database, as necessary, for the system to operate correctly when run.
 Here’s how you can help:
 
 **1. Clone the repository**
@@ -97,5 +95,5 @@ git push origin yourbranchname
 ```
 pytest
 python -m build
-twine upload -r testpypi dist/*
+twine upload -r pypi dist/*
 ```
