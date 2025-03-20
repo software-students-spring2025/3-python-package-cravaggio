@@ -1,6 +1,6 @@
 # Fortune Cookie Cravaggio
 
-[![log github events](https://github.com/software-students-spring2025/3-python-package-cravaggio/actions/workflows/event-logger.yml/badge.svg?branch=main)](https://github.com/software-students-spring2025/3-python-package-cravaggio/actions/workflows/event-logger.yml)
+[![log github events](https://github.com/software-students-spring2025/3-python-package-cravaggio/actions/workflows/event-logger.yml/badge.svg)](https://github.com/software-students-spring2025/3-python-package-cravaggio/actions/workflows/event-logger.yml)
 
 Team members: [Nina Li](https://github.com/), [Sirui Wang](https://github.com/), [Bohan Yin](https://github.com/), [Nick Zhu](https://github.com/)
 
