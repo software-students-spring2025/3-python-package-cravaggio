@@ -29,9 +29,6 @@ pip install fortunecookiecravaggio
 ```
 from fortunecookiecravaggio import get_fortune, fortune_of_the_day, custom_fortune, fortune_with_ascii_art
 ```
-**3. Add a fortunes.txt in the directory**
-
-Create your own or download the predefined list [fortunes.txt](https://github.com/software-students-spring2025/3-python-package-cravaggio/blob/main/src/fortunecookiecravaggio/fortunes.txt)
 
 ## Usage Examples
 See [example.py](https://github.com/software-students-spring2025/3-python-package-cravaggio/blob/main/example.py)
