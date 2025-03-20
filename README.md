@@ -2,8 +2,6 @@
 
 [![log github events](https://github.com/software-students-spring2025/3-python-package-cravaggio/actions/workflows/event-logger.yml/badge.svg?branch=main)](https://github.com/software-students-spring2025/3-python-package-cravaggio/actions/workflows/event-logger.yml)
 
-[![log github events](https://github.com/software-students-spring2025/3-python-package-cravaggio/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/software-students-spring2025/3-python-package-cravaggio/actions/workflows/build.yml)
-
 [![CI / CD](https://github.com/software-students-spring2025/3-python-package-cravaggio/actions/workflows/build.yml/badge.svg)](https://github.com/software-students-spring2025/3-python-package-cravaggio/actions/workflows/build.yml)
 
 Team members: [Nina Li](https://github.com/nina-jsl), [Sirui Wang](https://github.com/siruiii), [Bohan Yin](https://github.com/Hans-Yin), [Nick Zhu](https://github.com/NickZhuxy)
