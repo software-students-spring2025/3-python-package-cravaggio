@@ -1,12 +1,11 @@
-
-import datetime 
-from unittest.mock import patch 
+import datetime
+from unittest.mock import patch
 from fortunecookiecravaggio.fortune import fortune_of_the_day
 
 def test_fortune_of_the_day_returns_expected():
     fortune = fortune_of_the_day()
     assert isinstance(fortune, str), "Expected a string fortune"
-    # test the fortune is not empty:
+    # Test that the fortune is not empty:
     assert fortune.strip(), "Expected a non-empty fortune string"
 
 def test_fortune_of_the_day_consistent_for_same_date():
@@ -16,7 +15,7 @@ def test_fortune_of_the_day_consistent_for_same_date():
     with patch("fortunecookiecravaggio.fortune.date") as mock_date:
         # Mock date.today() -> test_date
         mock_date.today.return_value = test_date
-        mock_date.today.return_value.toordinal.return_value = test_date.toordinal()
+        mock_date.return_value.toordinal.return_value = test_date.toordinal()
         
         # Call the function multiple times, should be the same fortune
         fortune1 = fortune_of_the_day()
@@ -32,13 +31,13 @@ def test_fortune_of_the_day_different_for_different_dates():
     with patch("fortunecookiecravaggio.fortune.date") as mock_date:
         # Mock first date
         mock_date.today.return_value = test_date_1
-        mock_date.today.return_value.toordinal.return_value = test_date_1.toordinal()
+        mock_date.return_value.toordinal.return_value = test_date_1.toordinal()
         fortune_day_1 = fortune_of_the_day()
     
     with patch("fortunecookiecravaggio.fortune.date") as mock_date:
         # Mock second date
         mock_date.today.return_value = test_date_2
-        mock_date.today.return_value.toordinal.return_value = test_date_2.toordinal()
+        mock_date.return_value.toordinal.return_value = test_date_2.toordinal()
         fortune_day_2 = fortune_of_the_day()
 
     assert fortune_day_1 != fortune_day_2, (
