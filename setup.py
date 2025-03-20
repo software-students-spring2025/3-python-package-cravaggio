@@ -8,5 +8,6 @@ setup(
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/software-students-spring2025/3-python-package-cravaggio", 
-    packages=find_packages(),
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
 )
