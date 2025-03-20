@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="fortunecookiecravaggio",
-    version="1.0.1",
+    version="1.0.2",
     author="Cravaggio",
     description="A package that generates “fortune cookie” messages, programming wisdom, or absurd advice when called.",
     long_description=open("README.md").read(),

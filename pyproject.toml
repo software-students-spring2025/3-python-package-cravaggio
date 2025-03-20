@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fortunecookiecravaggio"
-version = "1.0.1"
+version = "1.0.2"
 authors = [{name="Nina Li",email="jl13999@nyu.edu"},{name="Sirui Wang",email="sw5546@nyu.edu"},{name="Bohan Yin",email="by2179@nyu.edu"},{name="Nick Zhu",email="xz4687@nyu.edu"}]
 description = "A package that generates “fortune cookie” messages, programming wisdom, or absurd advice when called."
 license = {file = "LICENSE"}

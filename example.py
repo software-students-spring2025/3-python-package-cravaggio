@@ -4,7 +4,7 @@ Example Usage of the Fortune Cookie Package
 
 Configuration:
 - Make sure you have installed the package dependencies (using pipenv or your preferred environment).
-- Ensure that the 'fortunes.txt' file is located in the 'src/fortunecookiecravaggio/' directory.
+- Ensure that the 'fortunes.txt' file is located in the same directory as your Python script.
 - No additional environment variables or database starter data are required.
 - To run this example, execute:
     python example.py

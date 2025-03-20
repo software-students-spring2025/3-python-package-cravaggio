@@ -9,6 +9,9 @@ twine = "*"
 pytest = "*"
 
 [dev-packages]
+build = "*"
+twine = "*"
+pytest = "*"
 
 [requires]
 python_version = "3.12"

@@ -7,8 +7,8 @@ def main():
 Get a randomly generated fortune, programming wisdom, or a bit of absurd advice.
 
 🔮 Features:
-- Get a random fortune based on user input: `get_fortune('Any word, phrase, or thought')`
-- Add your own fortune messages: `custom_fortune("Your message", "Author")`
+- Get a random fortune based on user input: `get_fortune("Any word, phrase, or thought")`
+- Add your own fortune messages: `custom_fortune("Custom message")`
 - Get a fortune with an ASCII fortune cookie: `fortune_with_ascii_art()`
 - Discover the daily prophecy: `fortune_of_the_day()`
 
